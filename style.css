@@ -1,36 +1,67 @@
+/* Main page - About (index.html), header & footer css */
 body{
 background-color: black;
+margin: 0;
+padding: 0;
 }
-header{
-    background-color:gray;
-    display: flex;
-    justify-content: space-around;
-    height: 70px;
+.header{
+    background-color:#333;
+    height: 80px;
+    width:100%;
+}
+.header a{
+    text-decoration: none; 
+    color: white; 
+    padding-top: 20px;
+    padding: 20px 20px 20px;
     font-size: 20px;
-}
-a:hover{
-    color: cyan;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 #about{
     color: white;
+    text-decoration: none;
+    padding-top: 20px;
+    text-align: center;
+    padding: 50px 10%;
 }
 h1{
+    padding-top: 100px;
     text-align: center;
-    color:cadetblue;
+    color:cyan;
+    font-size: 40px;
+    text-transform: uppercase;
+    position: relative;
 }
 #aboutsdiv{
     display: flex;
+    gap: 40px;
+    background-color:rgb(148, 145, 149);
+    border-radius: 15px;
+    padding: 30px;
+    backdrop-filter: blur(10px);
+    box-shadow:0px 0px 15px gray;
     padding-left: 120px;
     padding-right: 120px;
     font-size: 25px;
+    color: white;
 }
-p{
-padding-left: 10px;
+
+#aboutsdiv img{
+    border-radius: 10px;
+    box-shadow:0px 0px 15px darkgray;
 }
-h1{
-    font-size: 30px;
+
+#aboutsdiv p{
+    line-height: 1.5;
+    text-align: left;
+    font-size: 22px;
 }
+
 .vid{
+    background: rgb(148, 145, 149);
+    margin-top: 40px;
+    box-shadow:0px 0px 15px darkgray;
+    border-radius: 15px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -38,10 +69,280 @@ h1{
     padding-right: 120px;
     font-size: 25px;
 }
-footer{
-    padding: 20px;
-    background-color:gray;
+.vid p{
+    font-size: 22px;
+    color: white;
+}
+video{
+    display: block;
+    height: auto; 
+    margin: 0 auto;
+    padding: 10px;
+}
+.footer{
+    padding-bottom: 40px;
+    background-color:#333;
     color:white;
     display: block;
     justify-items: center;
+    height:45px;
 }
+#aboutsdiv, .vid{
+opacity: 0;
+transform: translateY(20px);
+animation: fadeIn 1s ease-out forwards;
+}
+@keyframes fadeIn {
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.career{
+  position: relative;
+  display: inline-block;
+}
+.content{
+    display: none;
+    position: absolute;
+    background-color: white;
+    z-index: 1;
+    top:100%;
+}
+.content a{
+    text-decoration: none;
+    display: block;
+    color: black;
+}
+.dropdown{
+    background-color: #333;
+    border:none;
+    color: white;
+    font-size: 20px;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    height: 60px;
+    cursor: pointer;
+}
+
+.header a:hover, .career:hover .dropdown{
+ background-color: red;
+}
+.content a:hover{
+    background-color: gray;
+}
+.career:hover .content{
+    display: block;
+}
+
+/* Education.html css */
+ .education, .certifications{
+    display: flex;
+    justify-content: center;
+ }
+ .edu,.cert{
+    background:rgba(255, 255, 255, 0.1) ;
+    backdrop-filter: blur(8px);
+    border-radius: 15px;
+    overflow: hidden;
+    width: 400px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 10px rgba(255, 255, 255, 0.2);
+ }
+ .edu:hover,.cert:hover{
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(255, 255, 255, 0.2);
+ }
+ .edu img{
+    width: 100%;
+    height:300px;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+ }
+ .cert img{
+    width: 100%;
+    height:200px;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+ }
+figcaption{
+    color: white;
+    padding: 15px;
+    background-color: rgba(255, 255, 255, 0.4);
+    font-style: normal;
+    text-align: center;
+    backdrop-filter: blur(5px);
+    border-radius: 0 0 15px 15px;
+    height: 100px;
+}
+figcaption h2{
+    font-size: 1.5rem;
+    margin-top: 5px;
+}
+figcaption p{
+    font-size: 1.0rem;
+}
+
+/* Experience.html css */
+#experience{
+    text-align: center;
+    color: white;
+    padding: 40px 20px;
+}
+.time{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap:20px;
+    padding-bottom: 10px;
+}
+.job{
+    background:rgb(148, 145, 149);
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0px 4px 8px dimgray;
+    position: relative;
+    width: 60%;
+    border-left: 5px solid cyan;
+}
+.job:hover{
+   background: gray;
+   transform: scale(1.05);
+}
+.job h2{
+    text-transform: uppercase;
+    color: paleturquoise;
+}
+.job p{
+    color: lightcyan;
+    font-size: 20px;
+}
+
+.details{
+    display: none;
+    background-color:rgb(148, 145, 149);
+    margin-top: 10px;
+    padding: 10px;
+    border-radius: 8px;
+    font-size: 15px;
+    
+}
+.details ul{
+    list-style:none;
+    padding: 0;
+}
+.details ul li{
+    padding: 5px 0;
+    border-bottom: 1px solid gray;
+}
+
+/* Resume.html css */
+.resume{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+/* Projects.html css */
+#projects{
+    text-align: center;
+    color: white;
+}
+.AllProjects{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap:20px;
+    margin-bottom: 10px;
+}
+.Project{
+    background-color:#2A3439;
+    padding: 15px;
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.Project:hover{
+    transform: scale(1.05);
+    box-shadow: 0px 5px 10px gray;
+}
+.info{
+    padding: 10px;
+}
+.info h2{
+    color:paleturquoise;
+    text-transform: uppercase;
+}
+.info a{
+    text-decoration: none;
+    color: white;
+    background-color: cadetblue;
+    padding: 8px 12px;
+    border-radius: 5px;
+}
+.info a:hover{
+    background: darkcyan;
+}
+
+/* Contact.html css */
+#contact{
+    text-align: center;
+    color: white;
+}
+#contact p{
+    font-size: 20px;
+    color: cadetblue;
+}
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap:40px;
+    flex-wrap: wrap;
+}
+form{
+    background-color: turquoise;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0px 5px 10px darkturquoise;
+    width: 400px;
+    margin-bottom: 20px;
+}
+form label{
+    display: block;
+    text-align: left;
+    font-weight: bold;
+    margin-top: 10px;
+    color:beige;
+    font-size: 20px;
+}
+input, textarea{
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border-radius: 5px;
+    border: none;
+}
+form button{
+    width: 30%;
+    padding: 10px;
+    margin-top: 15px;
+    border: none;
+    border-radius: 5px;
+    background:beige;
+    color: black;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+form button:hover{
+    background: burlywood;
+}
+
+
+
+
+
+
