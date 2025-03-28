@@ -356,7 +356,7 @@ form button:hover{
     .edu, .cert{
         width:380px;
     }
-    .edu figcaption{
+    .edu figcaption, .cert figcaption{
         color: black !important;
         background: white !important;
         display: block !important;
