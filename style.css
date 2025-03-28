@@ -139,7 +139,6 @@ animation: fadeIn 1s ease-out forwards;
     background:rgba(255, 255, 255, 0.1) ;
     backdrop-filter: blur(8px);
     border-radius: 15px;
-    overflow: hidden;
     width: 400px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     box-shadow: 0 4px 10px rgba(255, 255, 255, 0.2);
@@ -240,6 +239,16 @@ figcaption p{
     margin-top: 15px;
     margin-bottom: 15px;
 }
+.resume img{
+    display: none;
+}
+iframe{
+    width: 60%;
+    height: 700px;
+}
+.mobile{
+    display: none;
+}
 
 /* Projects.html css */
 #projects{
@@ -337,6 +346,7 @@ form button:hover{
     background: burlywood;
 }
 
+/* CSS to ensure responsive site */
 @media (max-width: 768px){
     #aboutsdiv{
      flex-direction: column;
@@ -355,7 +365,52 @@ form button:hover{
         width: 100%;
         height: auto;
     }
-    
+    .education,.certifications{
+      flex-direction: column;
+      align-items: center;
+    }
+    .edu, .cert{
+        width:380px;
+    }
+    .resume{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+    .mobile{
+        display: block;
+        font-size: 22px;
+        color: cyan;
+        text-align: center;
+        text-decoration: none;
+        padding: 15px;
+        background: cadetblue;
+        border-radius: 10px;
+        margin-bottom: 50px;
+    }
+    .resume img{
+        margin-top: 40px;
+        display: block;
+        width: 90%;
+        height: 350px;
+        margin-bottom: 20px;
+    }
+    .laptop{
+        display: none;
+    }
+    .AllProjects{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .Project{
+        width: 85%;
+    }
+    form{
+        width: 300px;
+    }
 }
 
 

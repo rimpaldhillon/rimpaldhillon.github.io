@@ -23,7 +23,10 @@ function Details(jobId){
 }
 
 //form submission event
-document.getElementById("form").addEventListener("submit", function(event){
+setTimeout(function(){
+ let form = document.getElementById("form");
+ if(form){
+  form.addEventListener("submit", function(event){
   event.preventDefault();
   let message = document.getElementById("message").value;
   let maillink = `mailto:rimpal.dhillon@yahoo.com?subject=Contact Form Submission&body=
@@ -33,4 +36,11 @@ document.getElementById("form").addEventListener("submit", function(event){
   window.location.href = maillink;
   this.reset();
 });
+ }
+ else{
+    console.warn("Form not opened yet.")
+ }
+});
+
+
 
