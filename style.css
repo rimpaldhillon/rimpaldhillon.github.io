@@ -353,11 +353,14 @@ form button:hover{
       align-items: center;
       overflow: visible;
     }
-    figcaption{
-        background: transparent;
-    }
     .edu, .cert{
         width:380px;
+    }
+    .edu figcaption{
+        color: black !important;
+        background: white !important;
+        display: block !important;
+        opacity: 1 !important;
     }
     .AllProjects{
         display: flex;
