@@ -352,34 +352,6 @@ form button:hover{
     .edu, .cert{
         width:380px;
     }
-    .resume{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        text-align: center;
-    }
-    .mobile{
-        display: block;
-        font-size: 22px;
-        color: cyan;
-        text-align: center;
-        text-decoration: none;
-        padding: 15px;
-        background: cadetblue;
-        border-radius: 10px;
-        margin-bottom: 50px;
-    }
-    .resume img{
-        margin-top: 40px;
-        display: block;
-        width: 90%;
-        height: 350px;
-        margin-bottom: 20px;
-    }
-    .laptop{
-        display: none;
-    }
     .AllProjects{
         display: flex;
         flex-direction: column;
