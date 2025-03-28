@@ -79,9 +79,14 @@ video{
     padding-bottom: 40px;
     background-color:#333;
     color:white;
-    display: block;
-    justify-items: center;
+    display: flex;
+    justify-content: center;
+    text-align: center;
     height:45px;
+}
+.footer a{
+    display: inline-block;
+    margin:0 10px;
 }
 #aboutsdiv, .vid{
 opacity: 0;
