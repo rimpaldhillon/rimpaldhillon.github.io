@@ -353,6 +353,9 @@ form button:hover{
       align-items: center;
       overflow: visible;
     }
+    figcaption{
+        background: transparent;
+    }
     .edu, .cert{
         width:380px;
     }
