@@ -74,6 +74,8 @@ video{
     height: auto; 
     margin: 0 auto;
     padding: 10px;
+    max-height: 300px;
+    object-fit: cover;
 }
 .footer{
     padding-bottom: 40px;
